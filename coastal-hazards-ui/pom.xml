@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>gov.usgs.cida.coastalhazards</groupId>
 		<artifactId>coastal-hazards</artifactId>
-		<version>1.0.9-1</version>
+		<version>1.0.9-2-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>coastal-hazards-ui</artifactId>
