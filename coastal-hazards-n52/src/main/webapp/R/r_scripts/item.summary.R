@@ -4,9 +4,9 @@
 
 # find theme
 
-library(hazardItems)
+library(itemSummaryService)
 library(RCurl)
-attrMap <- hazardItems:::attrMap
+
 metadata <- getURL(url=input, .opts=curlOptions(followlocation=TRUE))
 
 attr <- tolower(attr)
@@ -22,11 +22,11 @@ if (is.null(theme)){stop(paste(c(attr,'not supported by this service'),collapse=
 
 # should overload 'summary.service' to take a storm, historical, and vulnerability object?
 if (theme=='historical'){
-	summary	<- historical.service(metadata,attr)
+	summary	<-	historical.service(metadata,attr)
 } else if (theme=='vulnerability'){
-	summary	<- vulnerability.service(metadata,attr)
+	summary	<-	vulnerability.service(metadata,attr)
 } else if (theme=='storm'){
-	summary	<- storm.service(metadata,attr)
+	summary	<-	storm.service(metadata,attr)
 }
 
 sink('output.json')
