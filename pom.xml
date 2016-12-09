@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>gov.usgs.cida.coastalhazards</groupId>
 	<artifactId>coastal-hazards</artifactId>
-	<version>1.1.46.4</version>
+	<version>1.1.46.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Coastal Hazards</name>
   
@@ -125,7 +125,7 @@
 		<connection>scm:git:https://github.com/USGS-CIDA/coastal-hazards.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/USGS-CIDA/coastal-hazards.git</developerConnection>
 		<url>https://github.com/USGS-CIDA/coastal-hazards</url>
-    <tag>coastal-hazards-1.1.46.4</tag>
+    <tag>HEAD</tag>
   </scm>
 	
 	<distributionManagement>

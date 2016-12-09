@@ -4,7 +4,7 @@
     <parent>
         <groupId>gov.usgs.cida.coastalhazards</groupId>
         <artifactId>coastal-hazards</artifactId>
-        <version>1.1.46.4</version>
+        <version>1.1.46.5-SNAPSHOT</version>
     </parent>
     <artifactId>ehcache-shaded</artifactId>
     <packaging>jar</packaging>
