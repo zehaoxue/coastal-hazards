@@ -21,20 +21,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>gov.usgs.cida</groupId>
-			<artifactId>dynamicProperties</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>gov.usgs.cida</groupId>
-			<artifactId>proxy-utils</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>net.sf.ehcache</groupId>
-					<artifactId>ehcache</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
 			<groupId>gov.usgs.cida.auth</groupId>
 			<artifactId>auth-web-utils</artifactId>
 			<version>1.1.0</version>
@@ -62,32 +48,46 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>ehcache-shaded</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>gov.usgs.cida.jslibs</groupId>
-			<artifactId>jquery-fineuploader</artifactId>
-			<type>war</type>
-		</dependency>
-		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-		</dependency>
-		<dependency>	
-			<groupId>javax.servlet</groupId>	
-			<artifactId>jstl</artifactId>	
-			<scope>compile</scope>	
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>javax.servlet.jsp-api</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>javax.servlet.jsp.jstl</groupId>
 			<artifactId>jstl-api</artifactId>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<artifactId>proxy-utils</artifactId>
+			<groupId>gov.usgs.cida</groupId>
+			<exclusions>
+				<exclusion>
+					<groupId>net.sf.ehcache</groupId>
+					<artifactId>ehcache</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ehcache-shaded</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.usgs.cida</groupId>
+			<artifactId>dynamicProperties</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>gov.usgs.cida.jslibs</groupId>
+			<artifactId>jquery-fineuploader</artifactId>
+			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>gov.usgs.cida.jslibs</groupId>

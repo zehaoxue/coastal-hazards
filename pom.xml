@@ -112,7 +112,7 @@
 		<cida.maven.url>https://internal.cida.usgs.gov/maven</cida.maven.url>
 		<war.dir>src/main/webapp</war.dir>
 		<build.scm.version>${buildNumber}</build.scm.version>
-		<slf4j.version>1.7.25</slf4j.version>
+		<slf4j.version>1.7.13</slf4j.version>
 		<version.sugarjs>1.4.1</version.sugarjs>
 		<version.jquery>2.1.1</version.jquery>
 		<version.jquery.ui>1.11.1</version.jquery.ui>
@@ -121,6 +121,7 @@
 		<version.openlayers>2.13.1</version.openlayers>
 		<gs.version>2.10.2</gs.version>
 		<gt.version>16.2</gt.version>
+		<httpclient.version>4.5.1</httpclient.version>
 	</properties>
 	<scm>
 		<connection>scm:git:https://github.com/USGS-CIDA/coastal-hazards.git</connection>
@@ -180,159 +181,6 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>1.2.3</version>
-				<scope>compile</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.google.code.gson</groupId>
-				<artifactId>gson</artifactId>
-				<version>2.2.4</version>
-				<scope>compile</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.vividsolutions</groupId>
-				<artifactId>jts</artifactId>
-				<version>1.13</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-fileupload</groupId>
-				<artifactId>commons-fileupload</artifactId>
-				<version>1.3.3</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>2.5</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-jxpath</groupId>
-				<artifactId>commons-jxpath</artifactId>
-				<version>1.3</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-lang</groupId>
-				<artifactId>commons-lang</artifactId>
-				<version>2.6</version>
-			</dependency>
-			<dependency>
-				<groupId>gov.usgs.cida</groupId>
-				<artifactId>dynamicProperties</artifactId>
-				<version>1.0.2</version>
-			</dependency>
-			<dependency>
-				<groupId>gov.usgs.cida</groupId>
-				<artifactId>proxy-utils</artifactId>
-				<version>1.0.13</version>
-				<type>jar</type>
-				<exclusions>
-					<exclusion>
-						<artifactId>commons-logging</artifactId>
-						<groupId>commons-logging</groupId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>gov.usgs.cida.jslibs</groupId>
-				<artifactId>bootstrojs</artifactId>
-				<version>2013.20.4-3</version>
-				<type>war</type>
-			</dependency>
-			<dependency>
-				<groupId>gov.usgs.cida.jslibs</groupId>
-				<artifactId>dygraphs-core</artifactId>
-				<version>20130314-2</version>
-				<type>war</type>
-			</dependency>
-			<dependency>
-				<groupId>gov.usgs.cida.jslibs</groupId>
-				<artifactId>jquery-fineuploader</artifactId>
-				<version>3.4.0-4</version>
-				<type>war</type>
-			</dependency>
-			<dependency>
-				<groupId>gov.usgs.cida.jslibs</groupId>
-				<artifactId>jquery-tablesorter</artifactId>
-				<version>2.7.6-2</version>
-				<type>war</type>
-			</dependency>
-			<dependency>
-				<groupId>gov.usgs.cida.jslibs</groupId>
-				<artifactId>log4js</artifactId>
-				<version>1.4.3-3</version>
-				<type>war</type>
-			</dependency>
-				<dependency>
-				<groupId>gov.usgs.cida.jslibs</groupId>
-				<artifactId>usgs-template</artifactId>
-				<version>2.2</version>
-				<type>war</type>
-			</dependency>
-			<dependency>
-				<groupId>it.geosolutions</groupId>
-				<artifactId>geoserver-manager</artifactId>
-				<version>1.7.0</version>
-			</dependency>
-			<dependency>
-				<groupId>javax</groupId>
-				<artifactId>javaee-web-api</artifactId>
-				<version>6.0</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>3.0.1</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>	
-				<groupId>javax.servlet</groupId>	
-				<artifactId>jstl</artifactId>
-				<version>1.2</version>
-				<scope>provided</scope>	
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet.jsp</groupId>
-				<artifactId>javax.servlet.jsp-api</artifactId>
-				<version>2.3.1</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet.jsp.jstl</groupId>
-				<artifactId>jstl-api</artifactId>
-				<version>1.2</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>joda-time</groupId>
-				<artifactId>joda-time</artifactId>
-				<version>2.2</version>
-			</dependency>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.12</version>
-				<scope>test</scope>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/net.ossindex/ossindex-maven-plugin -->
-			<dependency>
-			    <groupId>net.ossindex</groupId>
-			    <artifactId>ossindex-maven-plugin</artifactId>
-			    <version>2.3.8</version>
-			</dependency>
-	        <dependency>
-	            <groupId>net.sf.ehcache</groupId>
-	            <artifactId>ehcache</artifactId>
-	            <version>2.8.2</version>
-	        </dependency>
-			<dependency>
-				<groupId>org.apache.httpcomponents</groupId>
-				<artifactId>httpclient</artifactId>
-				<version>4.5.2</version>
-				<type>jar</type>
-			</dependency>
-			<dependency>
 				<groupId>org.geoserver</groupId>
 				<artifactId>geoserver</artifactId>
 				<version>${gs.version}</version>
@@ -347,9 +195,221 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
+				<groupId>it.geosolutions</groupId>
+				<artifactId>geoserver-manager</artifactId>
+				<version>1.7.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${httpclient.version}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>1.1.3</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<artifactId>slf4j-api</artifactId>
+				<groupId>org.slf4j</groupId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest-core</artifactId>
+				<version>1.3</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest-all</artifactId>
+				<scope>test</scope>
+				<version>1.3</version>
+			</dependency>
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-web-api</artifactId>
+				<version>6.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.0.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>javax.servlet.jsp-api</artifactId>
+				<version>2.3.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet.jsp.jstl</groupId>
+				<artifactId>jstl-api</artifactId>
+				<version>1.2</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<artifactId>proxy-utils</artifactId>
+				<groupId>gov.usgs.cida</groupId>
+				<version>1.0.13</version>
+				<type>jar</type>
+				<exclusions>
+					<exclusion>
+						<artifactId>commons-logging</artifactId>
+						<groupId>commons-logging</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>2.1</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.4</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>2.6</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>1.2.2</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-jxpath</groupId>
+				<artifactId>commons-jxpath</artifactId>
+				<version>1.3</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openid4java</groupId>
+				<artifactId>openid4java</artifactId>
+				<version>0.9.7</version>
+			</dependency>
+			<dependency>
+				<groupId>gov.usgs.cida.jslibs</groupId>
+				<artifactId>usgs-template</artifactId>
+				<version>2.2</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>gov.usgs.cida</groupId>
+				<artifactId>dynamicProperties</artifactId>
+				<version>1.0.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>openlayers</artifactId>
+				<version>${version.openlayers}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>gov.usgs.cida.jslibs</groupId>
+				<artifactId>bootstrojs</artifactId>
+				<version>2013.20.4-3</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>gov.usgs.cida.jslibs</groupId>
+				<artifactId>log4js</artifactId>
+				<version>1.4.3-3</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>gov.usgs.cida.jslibs</groupId>
+				<artifactId>dygraphs-core</artifactId>
+				<version>20130314-2</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>jquery-ui</artifactId>
+				<version>${version.jquery.ui}</version>
+			</dependency>
+			<dependency>
+				<groupId>gov.usgs.cida.jslibs</groupId>
+				<artifactId>jquery-fineuploader</artifactId>
+				<version>3.4.0-4</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>gov.usgs.cida.jslibs</groupId>
+				<artifactId>jquery-tablesorter</artifactId>
+				<version>2.7.6-2</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>bootstrap</artifactId>
+				<version>${version.bootstrap}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>jquery</artifactId>
+				<version>${version.jquery}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>sugar</artifactId>
+				<version>${version.sugarjs}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>font-awesome</artifactId>
+				<version>${version.fontawesome}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.2.4</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
 				<groupId>org.glassfish.jersey.containers</groupId>
 				<artifactId>jersey-container-servlet</artifactId>
-				<version>2.18</version>
+				<version>2.17</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.media</groupId>
+				<artifactId>jersey-media-moxy</artifactId>
+				<version>2.17</version>
 			</dependency>
 			<dependency>
 			    <groupId>org.glassfish.jersey.ext</groupId>
@@ -362,88 +422,20 @@
 			    <version>2.17</version>
 			</dependency>
 			<dependency>
-				<groupId>org.glassfish.jersey.media</groupId>
-				<artifactId>jersey-media-moxy</artifactId>
-				<version>2.17</version>
+				<groupId>com.vividsolutions</groupId>
+				<artifactId>jts</artifactId>
+				<version>1.13</version>
 			</dependency>
-			<dependency>
-				<groupId>org.hamcrest</groupId>
-				<artifactId>hamcrest-all</artifactId>
-				<scope>test</scope>
-				<version>1.3</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hamcrest</groupId>
-				<artifactId>hamcrest-core</artifactId>
-				<version>1.3</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.openid4java</groupId>
-				<artifactId>openid4java</artifactId>
-				<version>0.9.8</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jcl-over-slf4j</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>log4j-over-slf4j</artifactId>
-				<version>${slf4j.version}</version>
-				<scope>compile</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-simple</artifactId>
-				<version>${slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.webjars</groupId>
-				<artifactId>bootstrap</artifactId>
-				<version>${version.bootstrap}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.webjars</groupId>
-				<artifactId>font-awesome</artifactId>
-				<version>${version.fontawesome}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.webjars</groupId>
-				<artifactId>jquery</artifactId>
-				<version>${version.jquery}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.webjars</groupId>
-				<artifactId>jquery-ui</artifactId>
-				<version>${version.jquery.ui}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.webjars</groupId>
-				<artifactId>openlayers</artifactId>
-				<version>${version.openlayers}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.webjars</groupId>
-				<artifactId>sugar</artifactId>
-				<version>${version.sugarjs}</version>
-			</dependency>
+	        <dependency>
+	            <groupId>net.sf.ehcache</groupId>
+	            <artifactId>ehcache</artifactId>
+	            <version>2.8.1</version>
+	        </dependency>
 		</dependencies>
 	</dependencyManagement>
 	
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.5</version>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -538,6 +530,5 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		
 	</build>
 </project>
