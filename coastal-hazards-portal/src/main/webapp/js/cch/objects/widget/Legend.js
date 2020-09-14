@@ -420,26 +420,7 @@ CCH.Objects.Widget.Legend = function (args) {
 					}
 				};
 				sorter = function(a,b){return b.years - a.years;};
-			} else if ("UVVR" === item.attr) {
-				//customize the bin label and sorter function
-				binLabeler = function (bin, index, bins) {
-					if (index === 0) {
-						return "Unvegetated";
-					} else if (index === 1) {
-						return "Higher<br><br><br>";
-					} else if (index === bins.length - 1) {
-						return "Lower";
-					} else {
-						return "";
-					}
-				};
-				sorter = function (a, b) {
-					if (a.lowerBound === b.lowerBound) return 0;
-					if (a.lowerBound === -1) return -1;
-					if (b.lowerBound === -1) return 1;
-					return b.lowerBound-a.lowerBound;
-				};
-			} else if ("UVVR_RASTER" === item.attr) {
+			} else if ("UVVR_RASTER" === item.attr || "UVVR" === item.attr) {
 				//customize the bin label and sorter function
 				binLabeler = function (bin, index, bins) {
 					if (index === 0) {

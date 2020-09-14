@@ -13,8 +13,8 @@ import java.util.Map;
 public final class Uvvr {
 
 	protected static final String[] attrs = new String[]{UVVR};
-	protected static final float[] thresholds = new float[]{-1f, -1f, 0f, 0.025f, 0.050f, 0.075f, 0.100f, 0.200f, 0.300f, 0.400f, 0.500f, 0.75f, 1.0f, 1.25f, 1.5f, 1.75f, 2.0f, 999999999f};
-	protected static final String[] colors = {"#A80000", "#A80000", "#2B41FF", "#386DFF", "#3B9DFF", "#30CFFF", "#00FFFF", "#70FFD2", "#A1FFA4", "#C7FF78", "#E7FF4A", "#FFFF00", "#FFD500", "#FFA600", "#FF7B00", "#FF4D00", "#FF0000"};
+	protected static final float[] thresholds = new float[]{-1f, 0.001f, 0.025f, 0.050f, 0.100f, 0.250f, 0.500f, 1.0f, 1.5f, 1.999f, 99999999f};
+	protected static final String[] colors = {"#4d9221", "#4d9221", "#4d9221", "#4d9221", "#7fbc41", "#b8e186", "#f7f7f7", "#f1b6da", "#c51b7d", "#c51b7d"};
         
 	protected static final String jspPath = "/SLD/bins_polygon.jsp";
 	protected static final String units = "Vulnerability Index";
